@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/root">
+
+    <ImageView
+        android:id="@+id/flagIv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_eur" />
+
+    <TextView
+        android:id="@+id/currencyTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="5sp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/flagIv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="EUR" />
+
+    <TextView
+        android:id="@+id/currencyNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:lineSpacingExtra="4sp"
+        android:textColor="#8B959E"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/flagIv"
+        app:layout_constraintTop_toBottomOf="@id/currencyTv"
+        tools:text="Euro" />
+
+    <EditText
+        android:id="@+id/quantityEt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:backgroundTint="#CED5DB"
+        android:hint="0"
+        android:inputType="number"
+        android:digits="0123456789,"
+        android:imeOptions="actionDone"
+        android:textIsSelectable="false"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="100" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
